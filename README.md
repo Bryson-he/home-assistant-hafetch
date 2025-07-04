@@ -155,7 +155,7 @@ A terminal-style dashboard widget for Home Assistant inspired by Neofetch. It fe
 
 * **Frontend**:
 
-  * [TailwindCSS Template Card](https://github.com/Geek-RCJ/TailwindCSS-Template-card) (install via HACS)
+  * [TailwindCSS Template Card]([https://github.com/Geek-RCJ/TailwindCSS-Template-card](https://github.com/usernein/tailwindcss-template-card)) (install via HACS)
 
 ---
 
