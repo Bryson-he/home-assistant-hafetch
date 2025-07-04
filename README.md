@@ -1,105 +1,92 @@
+# hafetch
 
-```markdown
-# 🖥️ hafetch
-
-**A Neofetch-inspired terminal dashboard card for Home Assistant**, themed with the [Catppuccin](https://github.com/catppuccin/catppuccin) color palette.
+A Neofetch-inspired terminal dashboard card for Home Assistant, themed using the [Catppuccin](https://github.com/catppuccin/catppuccin) color palette.
 
 This card displays:
-- System stats (RAM, CPU, disk, etc.)
-- Lighting and media status
-- Color-coded values and blinking terminal-style cursor
-- Custom ASCII art
-- Fully responsive with TailwindCSS Template Card
+- System statistics (RAM, CPU, disk usage)
+- Smart TV and automation states
+- Light on/off status and brightness
+- A terminal-style layout with blinking cursor
+- Customizable ASCII art logo
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 
-![hafetch screenshot](screenshot.png)
+![screenshot](screenshot.png)
 
 ---
 
-## 🧪 Example Output
+## Example Output
 
 ```
-
-\[user\@homeassistant \~]\$ hafetch
-\-------------------- OS: Home Assistant -------------------
-
-* Ram Usage: 64°C
-* CPU Usage: 5.7%
-* CPU Temp: 48.8%
-* Array Usage: 85.8%
-* Cache Usage: 12.1%
-  \---------------------- Lighting Status --------------------
-* Pc Tv: on
-* Auto Light: on
-* Neon Light: on
-* Wall Light: on • 100%
-* Wall Strip: off
-* Under Desk: off
-* Glorb Ball: on • 100%
-  \[user\@homeassistant \~]\$
-
-````
+[user@homeassistant ~]$ hafetch
+-------------------- OS: Home Assistant -------------------
+  - Ram Usage: 64°C
+  - CPU Usage: 5.7%
+  - CPU Temp: 48.8%
+  - Array Usage: 85.8%
+  - Cache Usage: 12.1%
+---------------------- Lighting Status --------------------
+- Pc Tv: on
+- Auto Light: on
+- Neon Light: on
+- Wall Light: on • 100%
+- Wall Strip: off
+- Under Desk: off
+- Glorb Ball: on • 100%
+[user@homeassistant ~]$
+```
 
 ---
 
-## 🛠️ Dependencies
+## Dependencies
 
-This card uses:
+This dashboard card requires:
 
-- **Home Assistant** with the following **placeholder entities** (replace with your own):
-  - `sensor.ram_usage`
-  - `sensor.cpu_usage`
-  - `sensor.cpu_temp`
-  - `sensor.disk_array_usage`
-  - `sensor.disk_cache_usage`
-  - `media_player.tv_display`
-  - `automation.auto_lighting`
-  - `switch.feature_neon`
-  - `light.wall_lamp`
-  - `light.strip_livingroom`
-  - `light.desk_strip`
-  - `light.rgb_ball`
+### Home Assistant entities (replace with your own):
 
-- **Frontend requirement**:
-  - [TailwindCSS Template Card](https://github.com/Geek-RCJ/TailwindCSS-Template-card) (via HACS)
+- `sensor.ram_usage`
+- `sensor.cpu_usage`
+- `sensor.cpu_temp`
+- `sensor.disk_array_usage`
+- `sensor.disk_cache_usage`
+- `media_player.tv_display`
+- `automation.auto_lighting`
+- `switch.feature_neon`
+- `light.wall_lamp`
+- `light.strip_livingroom`
+- `light.desk_strip`
+- `light.rgb_ball`
+
+### Frontend
+
+- [TailwindCSS Template Card](https://github.com/Geek-RCJ/TailwindCSS-Template-card) (install via HACS)
 
 ---
 
-## ⚙️ Setup
+## Setup
 
-1. Install **TailwindCSS Template Card** from HACS
-2. Add a card in Home Assistant:
+1. Install the TailwindCSS Template Card through HACS
+2. Create a new card in your dashboard:
    ```yaml
    type: custom:tailwindcss-template-card
    content: |
-     <!-- Paste the HTML/CSS from below -->
-````
-
-3. Replace all entity IDs with your actual devices/sensors.
-
----
-
-## 🧩 Customization
-
-* Swap the ASCII block in the `<pre>` section for your own logo or style
-* Change colors to match your theme or devices
-* Add/remove lines to reflect your setup
+     <!-- Paste the HTML/CSS code from hafetch here -->
+   ```
+3. Replace all placeholder entity IDs with your actual Home Assistant sensors/devices.
 
 ---
 
-## 🔗 Credits
+## Customization
 
-* Inspired by **Neofetch**
-* Color palette by [Catppuccin](https://github.com/catppuccin/catppuccin)
-
-```
+- Edit the `<pre>` block to use your own ASCII logo
+- Adjust sensor names and formatting to fit your setup
+- Change colors using Tailwind utility classes or Catppuccin references
 
 ---
 
-✅ Place the `screenshot.png` file in the **root of the repo** (same directory as the `README.md`), and GitHub will automatically render it.
+## Credits
 
-Would you like me to generate a matching `.gitignore`, `LICENSE`, or a sample release tag format for GitHub too?
-```
+- Inspired by Neofetch
+- Styled with the Catppuccin color palette
