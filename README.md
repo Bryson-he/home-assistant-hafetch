@@ -142,3 +142,24 @@ Entities you can replace:
 }
 </style>
 ```
+---
+
+🙌 Credits & Acknowledgements
+
+    Inspired by: Neofetch – the classic terminal system info tool.
+
+    Dashboard Styling: Catppuccin theme palette.
+
+    UI Card Engine: TailwindCSS Template Card by @usernein
+
+    Built For: Home Assistant dashboards.
+
+✏️ Contribution
+
+Feel free to fork this repo and:
+
+    Replace the ASCII with your own
+
+    Add more sections (weather, uptime, etc.)
+
+    Submit a PR if you want to share improvements!
