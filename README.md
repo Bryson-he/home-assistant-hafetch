@@ -6,9 +6,7 @@ A Neofetch-inspired terminal-style dashboard card for Home Assistant, styled wit
 ---
 
 ### 📸 Screenshot
-
-`screenshot.png`
-(Place this file in the same directory as the README)
+![screenshot](screenshot.png)
 
 ---
 
