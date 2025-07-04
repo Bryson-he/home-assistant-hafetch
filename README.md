@@ -7,7 +7,7 @@ Here's the full, clean `README.md` content for your GitHub repo. You can copy an
 
 A terminal-style dashboard widget for Home Assistant inspired by Neofetch. It features a blinking cursor, color-coded stats, a Catppuccin-themed palette, and customizable ASCII art.
 
-![screenshot](https://github.com/user-attachments/assets/18df12ff-9a25-41fd-baa4-2ae59341605e)
+![screenshot](screenshot.png)
 
 ---
 
