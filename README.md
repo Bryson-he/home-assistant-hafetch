@@ -1,7 +1,3 @@
-Here's the full, clean `README.md` content for your GitHub repo. You can copy and paste it directly:
-
----
-
 ```markdown
 # hafetch - Neofetch-style Home Assistant Dashboard Card
 
