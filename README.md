@@ -1,29 +1,26 @@
-```markdown
-# Hafetch - Terminal-Style Home Assistant Card
+```
+hafetch - Terminal-Style Home Assistant Card
+--------------------------------------------
 
-A Neofetch-inspired terminal dashboard card for Home Assistant, styled with [Catppuccin](https://github.com/catppuccin/catppuccin) and powered by Jinja2. Displays system stats, lighting states, and an animated cursor — right inside your dashboard.
+A Neofetch-inspired terminal-style dashboard card for Home Assistant, styled using the Catppuccin palette and powered by Jinja2. It displays system and lighting info in a terminal-like layout with an animated blinking cursor — directly inside your dashboard.
 
----
-
-## Features
-
-- Terminal-style layout using monospace fonts and ASCII art
-- System metrics: RAM, CPU, Temperature, Disk
-- Smart light status with brightness
-- Uses your own entities (fully customizable)
-- Styled with Catppuccin color palette
-- Animated blinking cursor
-- Works directly in the UI via TailwindCSS Template Card — no YAML needed
-
----
-
-## Screenshot
+Screenshot
+----------
 
 <img src="screenshot.png" alt="hafetch dashboard preview" width="600"/>
 
----
+Features
+--------
 
-## Example Output
+- Terminal-style interface using monospace fonts and ASCII art
+- Displays RAM, CPU, Disk, and Temperature stats
+- Lists lighting entities and brightness in real-time
+- Styled with Catppuccin colors
+- Animated blinking prompt cursor
+- Uses the TailwindCSS Template Card (no YAML editing required)
+
+Example Output
+--------------
 
 ```
 
@@ -47,41 +44,38 @@ A Neofetch-inspired terminal dashboard card for Home Assistant, styled with [Cat
 
 ````
 
----
+Dependencies
+------------
 
-## Dependencies
+You will need:
 
-You'll need the following:
+- Home Assistant
+- HACS installed
+- TailwindCSS Template Card: https://github.com/Geek-RCJ/TailwindCSS-Template-card
 
-- [Home Assistant](https://www.home-assistant.io/)
-- [TailwindCSS Template Card](https://github.com/Geek-RCJ/TailwindCSS-Template-card) (Install via HACS)
-
-Example entities used (replace with your own):
-- `sensor.ram_usage`, `sensor.cpu_usage`, `sensor.cpu_temperature`
-- `sensor.disk_array_usage`, `sensor.disk_cache_usage`
+Example entity placeholders used:
+- `sensor.ram_usage`
+- `sensor.cpu_usage`
+- `sensor.cpu_temperature`
+- `sensor.disk_array_usage`
+- `sensor.disk_cache_usage`
+- `light.wall_lamp`
+- `light.strip_livingroom`
+- `light.desk_strip`
+- `light.rgb_ball`
 - `media_player.tv_display`
 - `switch.feature_neon`
 - `automation.auto_lighting`
-- `light.wall_lamp`, `light.strip_livingroom`, `light.desk_strip`, `light.rgb_ball`
 
----
+Setup Instructions
+------------------
 
-## Setup Guide
+1. Install the TailwindCSS Template Card via HACS.
+2. Go to your Dashboard > Add Card > choose “TailwindCSS Template Card”.
+3. Paste the full code block below into the HTML content box.
 
-### Step 1: Install TailwindCSS Template Card
-
-1. Open Home Assistant
-2. Go to **HACS > Frontend**
-3. Install **TailwindCSS Template Card**
-4. Refresh your browser
-
----
-
-### Step 2: Add the Card
-
-1. Go to your dashboard and click “**Add Card**”
-2. Select `TailwindCSS Template Card` from the list
-3. Paste the following code into the **HTML content** section:
+Code
+----
 
 ```html
 <div class="font-mono text-sm p-4 rounded-xl w-full overflow-x-auto" style="background-color:#1e1e2e; color:#cdd6f4;">
@@ -174,20 +168,14 @@ Example entities used (replace with your own):
 </style>
 ````
 
----
-
-## Contributing
-
-If you find bugs or want to suggest improvements, feel free to open a pull request or submit an issue.
-
----
-
 ## Credits
 
-* Based on [Neofetch](https://github.com/dylanaraps/neofetch)
-* Themed with [Catppuccin](https://github.com/catppuccin/catppuccin)
+* Inspired by Neofetch
+* Styled using the Catppuccin theme: [https://github.com/catppuccin/catppuccin](https://github.com/catppuccin/catppuccin)
 
 ```
 
-Let me know if you'd like this in a downloadable `.md` file or pushed as an update to your repo structure!
+---
+
+Let me know if you'd like this version exported as a `.md` or `.txt` file for upload to GitHub, or further formatted!
 ```
