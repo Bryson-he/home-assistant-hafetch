@@ -1,23 +1,28 @@
+---
+
+### ✅ Final `README.md` Template
+
 ```markdown
-# hafetch - Neofetch-style Home Assistant Dashboard Card
+# 🖥️ hafetch
 
-A terminal-style dashboard widget for Home Assistant inspired by Neofetch. It features a blinking cursor, color-coded stats, a Catppuccin-themed palette, and customizable ASCII art.
+**A Neofetch-inspired terminal dashboard card for Home Assistant**, themed with the [Catppuccin](https://github.com/catppuccin/catppuccin) color palette.
 
-![screenshot](screenshot.png)
-
----
-
-## Features
-
-- Terminal-like display with blinking prompt  
-- ASCII-art logo block  
-- System info: RAM, CPU, Disk, etc.  
-- Light/Automation states and brightness  
-- Fully customizable with template sensors and colors
+This card displays:
+- System stats (RAM, CPU, disk, etc.)
+- Lighting and media status
+- Color-coded values and blinking terminal-style cursor
+- Custom ASCII art
+- Fully responsive with TailwindCSS Template Card
 
 ---
 
-## Example Output
+## 📸 Screenshot
+
+![hafetch screenshot](screenshot.png)
+
+---
+
+## 🧪 Example Output
 
 ```
 
@@ -43,155 +48,61 @@ A terminal-style dashboard widget for Home Assistant inspired by Neofetch. It fe
 
 ---
 
-## Code
+## 🛠️ Dependencies
 
-```html
-<div class="font-mono text-sm p-4 rounded-xl w-full overflow-x-auto" style="background-color:#1e1e2e; color:#cdd6f4;">
-  <div class="grid grid-cols-[auto_1fr] gap-6">
-    <pre class="leading-tight whitespace-pre-wrap text-[#89b4fa]">
-                      ......                      
-                    ..........                    
-                  ..............                  
-                 ................                 
-               ....................               
-             ........................             
-           ............    ............           
-         ............        ............         
-       ..............        ..............       
-     ................        ................     
-    ...................    ...................    
-  .....................    .....................  
- ......................    ...................... 
-.......................    ........     ..........
-.......................    .......       .........
-.......................    ......         ........
-.......................    ......        .........
-..........     ........    ....        ...........
-.........        ......    ..     ................
-........         ......         ..................
-.........        ......       ....................
-..............     ....      .....................
-................     ..    .......................
-..................         .......................
-....................       .......................
- .....................     ...................... 
-</pre>
+This card uses:
 
-    <div class="text-base">
-      <div><span class="text-[#89dceb]">[user@homeassistant ~]$</span> hafetch</div>
-      <div class="text-[#f9e2af]">-------------------- <span class="text-[#a6e3a1]">OS: Home Assistant</span> -------------------</div>
-      <div>  - <span class="text-[#f9e2af]">Ram Usage</span>: {{ states('sensor.ram_usage') | round(0) }}°C</div>
-      <div>  - <span class="text-[#f38ba8]">CPU Usage</span>: {{ states('sensor.cpu_usage') }}%</div>
-      <div>  - <span class="text-[#cba6f7]">CPU Temp</span>: {{ states('sensor.cpu_temp') }}%</div>
-      <div>  - <span class="text-[#89b4fa]">Array Usage</span>: {{ states('sensor.disk_array_usage') }}%</div>
-      <div>  - <span class="text-[#94e2d5]">Cache Usage</span>: {{ states('sensor.disk_cache_usage') }}%</div>
-      <div class="text-[#f9e2af]">---------------------- <span class="text-[#a6e3a1]">Lighting Status</span> --------------------</div>
-      <div>- <span class="text-[#89b4fa]">Pc Tv</span>: {{ states('media_player.tv_display') }}</div>
-      <div>- <span class="text-[#a6e3a1]">Auto Light</span>: {{ states('automation.auto_lighting') }}</div>
-      <div>- <span class="text-[#f5c2e7]">Neon Light</span>: {{ states('switch.feature_neon') }}</div>
-      <div>- <span class="text-[#fab387]">Wall Light</span>: 
-        {% if is_state('light.wall_lamp', 'on') %}
-          on • {{ (state_attr('light.wall_lamp', 'brightness') | float * 100 / 255) | round(0) }}%
-        {% else %}
-          off
-        {% endif %}
-      </div>
-      <div>- <span class="text-[#f9e2af]">Wall Strip</span>: 
-        {% if is_state('light.strip_livingroom', 'on') %}
-          on • {{ (state_attr('light.strip_livingroom', 'brightness') | float * 100 / 255) | round(0) }}%
-        {% else %}
-          off
-        {% endif %}
-      </div>
-      <div>- <span class="text-[#cba6f7]">Under Desk</span>: 
-        {% if is_state('light.desk_strip', 'on') %}
-          on • {{ (state_attr('light.desk_strip', 'brightness') | float * 100 / 255) | round(0) }}%
-        {% else %}
-          off
-        {% endif %}
-      </div>
-      <div>- <span class="text-[#94e2d5]">Glorb Ball</span>: 
-        {% if is_state('light.rgb_ball', 'on') %}
-          on • {{ (state_attr('light.rgb_ball', 'brightness') | float * 100 / 255) | round(0) }}%
-        {% else %}
-          off
-        {% endif %}
-      </div>
-      <div><span class="text-[#89dceb]">[user@homeassistant ~]$ </span><span class="cursor">&nbsp;</span></div>
-    </div>
-  </div>
-</div>
+- **Home Assistant** with the following **placeholder entities** (replace with your own):
+  - `sensor.ram_usage`
+  - `sensor.cpu_usage`
+  - `sensor.cpu_temp`
+  - `sensor.disk_array_usage`
+  - `sensor.disk_cache_usage`
+  - `media_player.tv_display`
+  - `automation.auto_lighting`
+  - `switch.feature_neon`
+  - `light.wall_lamp`
+  - `light.strip_livingroom`
+  - `light.desk_strip`
+  - `light.rgb_ball`
 
-<style>
-@keyframes blink-caret {
-  0%, 100% { background-color: transparent; }
-  50% { background-color: #cdd6f4; }
-}
-
-.cursor {
-  display: inline-block;
-  width: 10px;
-  height: 1em;
-  animation: blink-caret 0.75s step-end infinite;
-}
-</style>
-````
+- **Frontend requirement**:
+  - [TailwindCSS Template Card](https://github.com/Geek-RCJ/TailwindCSS-Template-card) (via HACS)
 
 ---
 
-## Dependencies
+## ⚙️ Setup
 
-* **Home Assistant** with the following sample entities:
-
-  * `sensor.ram_usage`
-  * `sensor.cpu_usage`
-  * `sensor.cpu_temp`
-  * `sensor.disk_array_usage`
-  * `sensor.disk_cache_usage`
-  * `media_player.tv_display`
-  * `automation.auto_lighting`
-  * `switch.feature_neon`
-  * `light.wall_lamp`, `light.strip_livingroom`, `light.desk_strip`, `light.rgb_ball`
-
-* **Frontend**:
-
-  * [TailwindCSS Template Card]([https://github.com/Geek-RCJ/TailwindCSS-Template-card](https://github.com/usernein/tailwindcss-template-card)) (install via HACS)
-
----
-
-## Setup
-
-1. Install the **TailwindCSS Template Card** from HACS
-2. In your dashboard, add a new card:
-
+1. Install **TailwindCSS Template Card** from HACS
+2. Add a card in Home Assistant:
    ```yaml
    type: custom:tailwindcss-template-card
    content: |
-     <!-- Paste the full HTML/CSS code above here -->
-   ```
-3. Replace entity names with your own.
+     <!-- Paste the HTML/CSS from below -->
+````
+
+3. Replace all entity IDs with your actual devices/sensors.
 
 ---
 
-## Customization
+## 🧩 Customization
 
-* Swap out the ASCII art in the `<pre>` section with your own
-* Change entity names to suit your setup
-* Adjust colors or structure if needed
-
----
-
-## License
-
-MIT License
+* Swap the ASCII block in the `<pre>` section for your own logo or style
+* Change colors to match your theme or devices
+* Add/remove lines to reflect your setup
 
 ---
 
-## Credits
+## 🔗 Credits
 
-Inspired by Neofetch and themed with [Catppuccin](https://github.com/catppuccin/catppuccin)
+* Inspired by **Neofetch**
+* Color palette by [Catppuccin](https://github.com/catppuccin/catppuccin)
 
 ```
 
-Let me know if you'd like a `LICENSE` file or a `custom_cards/hafetch.yaml` sample too!
+---
+
+✅ Place the `screenshot.png` file in the **root of the repo** (same directory as the `README.md`), and GitHub will automatically render it.
+
+Would you like me to generate a matching `.gitignore`, `LICENSE`, or a sample release tag format for GitHub too?
 ```
