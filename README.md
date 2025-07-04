@@ -1,4 +1,3 @@
-```
 hafetch - Terminal-Style Home Assistant Card
 --------------------------------------------
 
@@ -12,72 +11,67 @@ Screenshot
 Features
 --------
 
-- Terminal-style interface using monospace fonts and ASCII art
-- Displays RAM, CPU, Disk, and Temperature stats
-- Lists lighting entities and brightness in real-time
-- Styled with Catppuccin colors
-- Animated blinking prompt cursor
-- Uses the TailwindCSS Template Card (no YAML editing required)
+• Terminal-style interface using monospace fonts and ASCII art  
+• Displays RAM, CPU, Disk, and Temperature stats  
+• Lists lighting entities and brightness in real-time  
+• Styled with Catppuccin colors  
+• Animated blinking prompt cursor  
+• Uses the TailwindCSS Template Card (no YAML editing required)
 
 Example Output
 --------------
 
-```
-
-\[user\@homeassistant \~]\$ hafetch
-\-------------------- OS: Home Assistant -------------------
-
-* Ram Usage: 64°C
-* CPU Usage: 5.7%
-* CPU Temp: 48.8%
-* Array Usage: 85.8%
-* Cache Usage: 12.1%
-  \---------------------- Lighting Status --------------------
-* Pc Tv: on
-* Auto Light: on
-* Neon Light: on
-* Wall Light: on • 100%
-* Wall Strip: off
-* Under Desk: off
-* Glorb Ball: on • 100%
-  \[user\@homeassistant \~]\$
-
-````
+[user@homeassistant ~]$ hafetch  
+-------------------- OS: Home Assistant -------------------  
+  - Ram Usage: 64°C  
+  - CPU Usage: 5.7%  
+  - CPU Temp: 48.8%  
+  - Array Usage: 85.8%  
+  - Cache Usage: 12.1%  
+---------------------- Lighting Status --------------------  
+- Pc Tv: on  
+- Auto Light: on  
+- Neon Light: on  
+- Wall Light: on • 100%  
+- Wall Strip: off  
+- Under Desk: off  
+- Glorb Ball: on • 100%  
+[user@homeassistant ~]$  
 
 Dependencies
 ------------
 
 You will need:
 
-- Home Assistant
-- HACS installed
-- TailwindCSS Template Card: https://github.com/Geek-RCJ/TailwindCSS-Template-card
+• Home Assistant  
+• HACS installed  
+• TailwindCSS Template Card → https://github.com/Geek-RCJ/TailwindCSS-Template-card  
 
-Example entity placeholders used:
-- `sensor.ram_usage`
-- `sensor.cpu_usage`
-- `sensor.cpu_temperature`
-- `sensor.disk_array_usage`
-- `sensor.disk_cache_usage`
-- `light.wall_lamp`
-- `light.strip_livingroom`
-- `light.desk_strip`
-- `light.rgb_ball`
-- `media_player.tv_display`
-- `switch.feature_neon`
-- `automation.auto_lighting`
+Example entity placeholders used:  
+- sensor.ram_usage  
+- sensor.cpu_usage  
+- sensor.cpu_temperature  
+- sensor.disk_array_usage  
+- sensor.disk_cache_usage  
+- light.wall_lamp  
+- light.strip_livingroom  
+- light.desk_strip  
+- light.rgb_ball  
+- media_player.tv_display  
+- switch.feature_neon  
+- automation.auto_lighting  
 
 Setup Instructions
 ------------------
 
-1. Install the TailwindCSS Template Card via HACS.
-2. Go to your Dashboard > Add Card > choose “TailwindCSS Template Card”.
-3. Paste the full code block below into the HTML content box.
+1. Install the TailwindCSS Template Card from HACS.
+2. Go to your Home Assistant Dashboard and click “Add Card”.
+3. Select the “TailwindCSS Template Card” from the list.
+4. Paste the code below into the HTML content box.
 
 Code
 ----
 
-```html
 <div class="font-mono text-sm p-4 rounded-xl w-full overflow-x-auto" style="background-color:#1e1e2e; color:#cdd6f4;">
   <div class="grid grid-cols-[auto_1fr] gap-6">
     <pre class="leading-tight whitespace-pre-wrap text-[#89b4fa]">
@@ -166,16 +160,9 @@ Code
   animation: blink-caret 0.75s step-end infinite;
 }
 </style>
-````
 
-## Credits
+Credits
+-------
 
-* Inspired by Neofetch
-* Styled using the Catppuccin theme: [https://github.com/catppuccin/catppuccin](https://github.com/catppuccin/catppuccin)
-
-```
-
----
-
-Let me know if you'd like this version exported as a `.md` or `.txt` file for upload to GitHub, or further formatted!
-```
+• Inspired by Neofetch  
+• Styled with the Catppuccin palette (https://github.com/catppuccin/catppuccin)
