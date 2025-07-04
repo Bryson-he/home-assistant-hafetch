@@ -134,12 +134,7 @@ Paste this into a `custom:tailwindcss-template-card` in your dashboard (replace 
 ## Instructions
 
 1. Install **TailwindCSS Template Card** from HACS
-2. Add a new card with:
-   ```yaml
-   type: custom:tailwindcss-template-card
-   content: |
-     <!-- paste the HTML/CSS above here -->
-   ```
+2. Add a new TailwindCSS card
 3. Replace all entity IDs with your own sensors/lights/media players
 4. Customize the ASCII block in the `<pre>` tag if you'd like
 
