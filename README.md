@@ -1,6 +1,3 @@
----
-
-### ✅ Final `README.md` Template
 
 ```markdown
 # 🖥️ hafetch
